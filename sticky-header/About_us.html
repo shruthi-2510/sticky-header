@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>History</title>
+        <header>
+            <nav>
+            <div class="one">
+            
+            <h1>Then Vs Now</h1>
+        
+            
+        
+            <ul>
+              
+                <li><a href="index.html" style="text-decoration: none; color: inherit;">Home |</a></li>
+               
+                <li><a href="About_us.html" style="text-decoration: none; color: inherit;">Discover |</a></li>
+                <li><a href="bucketlist.html" style="text-decoration: none; color: inherit;">Events |</a></li>
+                 <li><a href="tips.html" style="text-decoration: none; color: inherit;">Tips |</a></li>
+                 <li><a href="Register.html" style="text-decoration: none; color: inherit;">Register</a></li>
+               
+            </ul>
+           
+        </nav>
+    
+        </header>
+        <style>
+        
+            .one
+        {
+        color:black;
+        background-color:hwb(0 66% 5%);
+        height: 30px;
+        padding: 12px;
+        position: sticky;
+        top: 0;
+        margin:0px;
+        z-index: 1000;
+    }
+            header {
+        position: sticky;
+        top: 0;
+        z-index: 1000; 
+        background-color: #fff; 
+        height: 60px; 
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+      }
+      ul,li,h1{
+        display:inline;
+    }
+    ul{
+        margin-left: 50%;
+        cursor:ext-decoration: none;
+        color:inherit
+    }
+    li:hover{
+    color:white;
+    background-color: black;
+    }
+    .current a {
+    text-decoration: underline;
+    font-weight: bold;
+     }
+    </style>
+
+        <style>
+            body {
+                background-color: rgb(204, 232, 232);
+                padding: 20px;
+                font-family: 'Times New Roman',Times, serif;
+                color: #333;
+                background-image: url('wallpaper.webp');
+                background-size: cover;
+                background-position: center;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .section {
+                display: flex;
+                align-items: center;
+                margin: 20px 0;
+            }
+            .section img {
+                width: 500px;
+                height: 500px;
+                margin: 0 20px;
+            }
+            .section p {
+                max-width: 800px;
+                text-align: center;
+                font-size: 25px;
+                color: #7c197c;
+            }
+            .section:nth-last-child(-n+3) p {
+                color: #100606;
+            }
+            
+            .right {
+                flex-direction: row-reverse;
+            }
+            h1 {
+                color: #4f034d;
+                font-size: 30px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- <center>
+            <h1>ITINERARY</h1> -->
+            <!-- <img src="then.png" alt="Its different now" width="400" height="600">
+        </center> -->
+
+
+        <center>
+            <h1 style="color: #d1320f;">THEN</h1>
+        </center>
+        <div class="container">
+            <div class="section">
+                <img src="old14.jpg" alt="Historical Amsterdam ">
+                <p>
+                    Amsterdam, the capital of the Netherlands, is a city rich in history and cultural significance. Located in the northern part of the country, it has evolved from a humble fishing village in the 13th century into one of the world's most important ports and financial centers. Originally a dam on the Amstel River, Amsterdam's strategic location and innovative water management have made it a vital hub for trade and commerce. Its transformation was significantly boosted in 1275 when Count Floris V exempted residents from paying tax, allowing the city to thrive in business activities such as trade and fishing.
+                </p>
+            </div>
+            <div class="section right">
+                <img src="historic15.jpg" alt="Amsterdam during the Golden Age">
+                <p>
+                    By the 17th century, Amsterdam had reached its "Golden Age," becoming the wealthiest city globally. This period saw the establishment of the Dutch East India Company, the first stock exchange, and a flourishing trade network that connected the city to various parts of the world. Despite facing challenges such as the plague and wars in the 18th and 19th centuries, Amsterdam rebounded with the industrial revolution, marked by the construction of the Amsterdam-Rhine Canal and significant infrastructural projects. These developments solidified its status as a major economic powerhouse and set the stage for its modern resurgence.
+                </p>
+            </div>
+            <center>
+                <h1 style="color: #d1320f;">NOW</h1>
+            </center>
+            <div class="section">
+                <img src="modern.jpg" alt="Modern Amsterdam">
+                <p>
+                    Today's Amsterdam is a dynamic and cosmopolitan city that seamlessly blends its rich historical heritage with modern innovation and cultural vibrancy. As the capital of the Netherlands, Amsterdam is known for its picturesque canals, charming narrow houses, and a network of bridges that lend it a distinctive character. The city's architecture is a testament to its historical roots, with well-preserved buildings that date back to the Dutch Golden Age. These historical sites coexist with cutting-edge modern architecture, reflecting Amsterdam's ability to honor its past while embracing the future.
+                </p>
+            </div>
+            <div class="section right">
+                <img src="hub.jpg" alt="Cultural Hub of Amsterdam">
+                <p>
+                    Amsterdam is also a major cultural hub, boasting an array of world-class museums, art galleries, and theaters. The Rijksmuseum, Van Gogh Museum, and Anne Frank House are just a few of the city's renowned cultural institutions that attract millions of visitors each year. The city's vibrant arts scene extends to its numerous music venues, including the Concertgebouw, which is celebrated for its exceptional acoustics. Festivals and events, such as King’s Day, Amsterdam Dance Event, and the International Documentary Film Festival, highlight the city's lively and diverse cultural landscape.
+                </p>
+            </div>
+            <div class="section">
+                <img src="lgbtq18.jpg" alt="Progressive Amsterdam">
+                <p>
+                    The city is globally recognized for its progressive social policies and high quality of life. Amsterdam's liberal attitudes towards issues such as drug decriminalization and LGBTQ+ rights have made it a symbol of tolerance and inclusivity. The city's commitment to sustainability and green living is evident in its extensive cycling infrastructure, which encourages residents and visitors to explore the city on bikes. Amsterdam's public transportation system, including trams, buses, and ferries, is efficient and eco-friendly, further enhancing its appeal as a modern, livable city.
+                </p>
+            </div>
+        </div>
+
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const currentPath = window.location.pathname.split("/").pop();
+                const navLinks = document.querySelectorAll("nav ul li a");
+                
+                navLinks.forEach(link => {
+                    if(link.getAttribute("href") === currentPath) {
+                        link.parentElement.classList.add("current");
+                    }
+                });
+            });
+            </script>
+            
+    </body>
+</html>

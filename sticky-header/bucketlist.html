@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html >
+<head>
+   
+    <title>A visual treat</title>
+    
+    <header>
+        <nav>
+        <div class="one">
+        
+        <h1>Here's all you need!</h1>
+    
+      
+    
+        <ul>
+           
+            <li><a href="index.html" style="text-decoration: none; color: inherit;">Home |</a></li>
+           
+            <li><a href="About_us.html" style="text-decoration: none; color: inherit;">Discover |</a></li>
+            <li><a href="bucketlist.html" style="text-decoration: none; color: inherit;">Events |</a></li>
+             <li><a href="tips.html" style="text-decoration: none; color: inherit;">Tips |</a></li>
+             <li><a href="Register.html" style="text-decoration: none; color: inherit;">Register</a></li>
+           
+        </ul>
+       
+    </nav>
+
+    </header>
+    <center>
+        <strong>
+            <h1 style="color: #043aa7;">ITINERARY</h1>
+        </strong>
+
+    </center>
+    
+    <style>
+        .one
+    {
+    color:black;
+    background-color:hwb(0 66% 5%);
+    height: 30px;
+    padding: 12px;
+    position: sticky;
+    top: 0;
+    margin:0px;
+    z-index: 1000;
+}
+        header {
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+    background-color: #fff; 
+    height: 60px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+  }
+  ul,li,h1{
+    display:inline;
+}
+ul{
+    margin-left: 50%;
+    cursor:ext-decoration: none;
+    color:inherit
+}
+li:hover{
+color:white;
+background-color: black;
+}
+
+.current a {
+    text-decoration: underline;
+    font-weight: bold;
+     }
+        body {
+            background-color: rgb(4, 123, 115);
+            color: white;
+            background-image:url('travel.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1 {
+            color: rgb(197, 29, 29);
+        }
+    </style>
+</head>
+<body>
+    <center>
+        
+        <img src="bucketlist.jpg" alt="Here is what you want!" width="700" height="900">
+       
+    </center>
+   
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const currentPath = window.location.pathname.split("/").pop();
+            const navLinks = document.querySelectorAll("nav ul li a");
+            
+            navLinks.forEach(link => {
+                if(link.getAttribute("href") === currentPath) {
+                    link.parentElement.classList.add("current");
+                }
+            });
+        });
+        </script>
+        
+</body>
+</html>

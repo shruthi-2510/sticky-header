@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tips and Tricks</title>
+    <style>
+        body {
+            background-color: rgb(4, 123, 115);
+            color: white;
+            background-image: url('rose.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+       
+
+        .one {
+            color: black;
+            background-color: hwb(0 66% 5%);
+            height: 30px;
+            padding: 12px;
+            position: sticky;
+            top: 0;
+            margin: 0px;
+            z-index: 1000;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000; 
+            background-color: #fff; 
+            height: 60px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
+        ul, li, h1 {
+            display: inline;
+        }
+
+        ul {
+            margin-left: 50%;
+            cursor: ext-decoration: none;
+            color: inherit;
+        }
+
+        li:hover {
+            color: white;
+            background-color: black;
+        }
+        .current a {
+    text-decoration: underline;
+    font-weight: bold;
+     }
+
+        h1 {
+            color: rgb(197, 29, 29);
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        .tip {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .tip img {
+            width: 150px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+
+        .tip h2 {
+            color: #ffd700;
+            margin: 0;
+        }
+
+        .tip p {
+            text-align: justify;
+            color: white;
+            margin: 0;
+        }
+
+        .tip-content {
+            flex: 1;
+        }
+
+        h1.title {
+            text-align: center;
+            color: #043aa7;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="one">
+                <h1>Attention People!</h1>
+                <ul>
+                   
+                    <li><a href="index.html" style="text-decoration: none; color: inherit;">Home |</a></li>
+                    <li><a href="About_us.html" style="text-decoration: none; color: inherit;">Discover |</a></li>
+                    <li><a href="bucketlist.html" style="text-decoration: none; color: inherit;">Events |</a></li>
+                    <li><a href="tips.html" style="text-decoration: none; color: inherit;">Tips |</a></li>
+                    <li><a href="Register.html" style="text-decoration: none; color: inherit;">Register</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <center>
+        <strong>
+            <h1 class="title">TIPS & TRICKS</h1>
+        </strong>
+    </center>
+
+    <div class="content">
+        <div class="tip">
+            <img src="cash.jpg" alt="Cash and Cards">
+            <div class="tip-content">
+                <h2>Carry a mix of cash and cards</h2>
+                <p>
+                    In Amsterdam, there is a growing movement of cafes and restaurants going cashless – while some of the more traditional, older haunts like bruin cafés (brown cafes) may not take cards at all. It's best to carry a mix of cash and cards.
+                </p>
+            </div>
+        </div>
+
+        <div class="tip">
+            <img src="24hrs.jpg" alt="Amsterdam Hours">
+            <div class="tip-content">
+                <h2>Amsterdam is not a 24/7 city</h2>
+                <p>
+                    Amsterdam establishments keep very regular hours. Opening hours in shops are generally from about 10am to 6pm, and 8pm for supermarkets. Many shops and grocers do not open on Sundays (with the exception of busy tourist areas like Nieuwendijk and Kalverstraat). Coffeeshops tend to open in the morning and close around midnight, while bars and clubs go much later until 3 or 4am.
+                </p>
+            </div>
+        </div>
+
+        <div class="tip">
+            <img src="orange.jpg" alt="Orange Craze">
+            <div class="tip-content">
+                <h2>Make friends by wearing orange</h2>
+                <p>
+                    At sporting events in recent years, the Dutch are known for the oranjekoorts (orange fever) or oranjegekte (orange craze). If you want the Dutch to know you’re cheering for them, wear the royal family’s traditional color. The more outlandish and over-the-top – we’re talking wigs, feather boas and face paint – the better.
+                </p>
+            </div>
+        </div>
+
+        <div class="tip">
+            <img src="tulipbulbs.jpg" alt="Tulip Bulbs">
+            <div class="tip-content">
+                <h2>Can I transport tulip bulbs home?</h2>
+                <p>
+                    Tulip bulbs purchased at Amsterdam’s Bloemenmarkt can be shipped back to countries such as the United States, but an official certificate is needed for customs. Look for the sticker that says, “To the Plant Protection Service of the United States and Canada.” The additional certificate must be dated within six weeks of travel (otherwise, it’s best to have the seller ship them).
+                </p>
+            </div>
+        </div>
+
+        <div class="tip">
+            <img src="tips.webp" alt="Tipping">
+            <div class="tip-content">
+                <h2>Do I need to tip?</h2>
+                <p>
+                    Tipping is not expected in Amsterdam where hospitality workers receive a fair wage for their professions, and are not dependent on the tip jar contributions as might be the case elsewhere. Of course a tip (around 10% is normal) for excellent service is not going to be considered odd. Feel free to tip in bars, cafes, restaurants and accommodation if the service warrants it. If you take a free walking tour, presenting your guide with a decent tip at the end is normal.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const currentPath = window.location.pathname.split("/").pop();
+            const navLinks = document.querySelectorAll("nav ul li a");
+            
+            navLinks.forEach(link => {
+                if(link.getAttribute("href") === currentPath) {
+                    link.parentElement.classList.add("current");
+                }
+            });
+        });
+        </script>
+        
+</body>
+</html>

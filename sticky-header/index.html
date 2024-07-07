@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> AMSTERDAM! </title>
+    <link rel="stylesheet" href="cof.css">
+    <link rel="icon" href="camera.jpg"> 
+</head>
+<body><header><nav>
+    <div class="one">
+    
+    <h1>Hey Peeps!</h1>
+
+   
+
+    <ul>
+        
+        <li><a href="index.html" style="text-decoration: none; color: inherit;">Home |</a></li>
+       
+        <li><a href="About_us.html" style="text-decoration: none; color: inherit;">Discover |</a></li>
+        <li><a href="bucketlist.html" style="text-decoration: none; color: inherit;">Events |</a></li>
+         <li><a href="tips.html" style="text-decoration: none; color: inherit;">Tips |</a></li>
+         <li><a href="Register.html" style="text-decoration: none; color: inherit;">Register</a></li>
+       
+    </ul>
+</nav>
+</header>
+
+<div class="two">
+<p>
+    <center>
+    <strong>
+        <h1> AMSTERDAM </h1><br>
+        
+        <h1>
+        A'dam, Dam City!</strong></h1>
+</center>
+    
+</p>
+</div>
+<center>
+<div >
+    
+    <div class="box">
+        <img src="van-3.jpg" alt="Van Gogh">
+        <p>Van Gogh Art Museum</p>
+    </div>
+    <div class="box">
+        <img src="Vondel4.jpeg" alt="Park">
+        <p>vondel Park</p>
+    </div>
+    <div class="box">
+        <img src="jordan5.jpg" alt="Jordan">
+        <p>The Jordan</p>
+    </div>
+    <div class="box">
+        <img src="museum-quarter6.jpg" alt="Museum">
+        <p>Museum Quarter</p>
+    </div>
+    <div class="box">
+        <img src="windmill7.jpg" alt="Caps">
+        <p>Windmill</p>
+    </div>
+    <div class="box">
+        <img src="tulip8.jpg" alt="Caps">
+        <p>Tulip Garden</p>
+    </div>
+    <div class="box">
+        <img src="moco9.jpg" alt="Caps">
+        <p>Moco Museum</p>
+    </div>
+    <div class="box">
+        <img src="dam square10.jpg" alt="Caps">
+        <p>Dam Square</p>
+    </div>
+    <div class="box">
+        <img  src="Rijk2.jpg" alt="Museum">
+        <p>Museum</p>
+    </div>
+    <div class="box">
+        <img src="beginhof11.jpg" alt="Caps">
+        <p>Beginhof</p>
+    </div>
+    <div class="box">
+        <img src="depijp12.jpg " alt="Caps">
+        <p>depijp</p>
+    </div>
+   
+
+</div>
+</center>
+
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const currentPath = window.location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll("nav ul li a");
+        
+        navLinks.forEach(link => {
+            if(link.getAttribute("href") === currentPath) {
+                link.parentElement.classList.add("current");
+            }
+        });
+    });
+    </script>
+
+
+</body>
+</html>

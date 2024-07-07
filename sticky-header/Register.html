@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <style>
+        /* Header and Navigation Styling */
+        .one {
+            color: black;
+            background-color: hwb(0 66% 5%);
+            height: 30px;
+            padding: 12px;
+            position: sticky;
+            top: 0;
+            margin: 0;
+            z-index: 1000;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000; 
+            background-color: #fff; 
+            height: 60px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
+        ul, li, h1 {
+            display: inline;
+        }
+
+        ul {
+            margin-left: 50%;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        li:hover {
+            color: white;
+            background-color: black;
+        }
+
+        .current a {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        /* Body Styling */
+        body {
+            background-image: url('river.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            color: #333;
+        }
+
+        /* Form Container Styling */
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px; /* Adjust spacing from the header */
+            width: 400px; /* Adjust the width as needed */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        table {
+            margin: 0 auto;
+        }
+
+        td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <nav>
+            <div class="one">
+                <ul>
+                    <li><a href="index.html" style="text-decoration: none; color: inherit;">Home |</a></li>
+                    <li><a href="About_us.html" style="text-decoration: none; color: inherit;">Discover |</a></li>
+                    <li><a href="bucketlist.html" style="text-decoration: none; color: inherit;">Events |</a></li>
+                    <li><a href="tips.html" style="text-decoration: none; color: inherit;">Tips |</a></li>
+                    <li><a href="Register.html" style="text-decoration: none; color: inherit;">Register</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Form Container -->
+    <div class="form-container">
+        <center>
+            <h1>Register Now!</h1>
+        </center>
+        <form id="registrationForm">
+            <table>
+                <tr>
+                    <td>Username:</td>
+                    <td><input type="text" required></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" required></td>
+                </tr>
+                <tr>
+                    <td>Confirm Password:</td>
+                    <td><input type="password" required></td>
+                </tr>
+                <tr>
+                    <td>DOB:</td>
+                    <td><input type="date" required></td>
+                </tr>
+                <tr>
+                    <td>Email-id:</td>
+                    <td><input type="email" required></td>
+                </tr>
+                <tr>
+                    <td>Phone No:</td>
+                    <td><input type="number" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <!-- JavaScript for Form Submission -->
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            // Display alert message
+            alert('You have registered successfully and will be notified soon.');
+            
+            // Optionally, you can clear the form fields
+            this.reset();
+        });
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const currentPath = window.location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll("nav ul li a");
+        
+        navLinks.forEach(link => {
+            if(link.getAttribute("href") === currentPath) {
+                link.parentElement.classList.add("current");
+            }
+        });
+    });
+    </script>
+</body>
+</html>
